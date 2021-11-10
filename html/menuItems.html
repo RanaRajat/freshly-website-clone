@@ -8,73 +8,13 @@
 
     <style>
         
-        #itemDiv{
-            width: 100%;
-            height: 105rem;
-            margin: auto;
-            border: 1px solid black;
-            display: grid;
-            grid-template-columns: 24% 24% 24% 24%;
-            grid-gap: 0.6%;
-            position: absolute;
-        }
-.container{
-    
-    margin: 3%;
- 
-    margin-left: 3%;
-    padding: 1%;
-    
-}
-#imageDiv{
-    width: 100%;
-    height: 17rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    padding: 1px;
-}
-#itemImg{
-   
-  width: 19rem;
-    height: 17rem;
-  
-}
-.container>h4{
-    text-align: center;
-}
-.container>p{
-    text-align: center;
-    font-size: 1rem;
-    color: rgb(0, 0, 0,0.8);
-}
-.container>p:hover{
-    color: rgb(0, 0, 0);
-}
-
-#modalDivId{
-    width: 60%;
-    height: 600px;
-    border: 1px solid black;
-    background-color: white;
-    position: fixed;
-    z-index: 100;
-
-}
-#modal{
-    width: 70%;
-    height: 700px;
-    background-color: white;
-    border: 1px solid black;
-    position: relative;
-    z-index: 100;
-    margin-top: 60rem;
-}
     </style>
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body id="iDiv">
     <div id="itemDiv"></div>
-    <div id="modal"></div>
+    <div id = "modalDivSelect" ></div>
+    <div id="backgroundBlur" ></div>
 </body>
 </html>
 <script>
@@ -454,10 +394,14 @@ bodyDiv.append(itemDiv);
 
 let select = document.getElementById(x.itemNo);
 select.addEventListener("click" ,function(){
-console.log(x.itemName);
 
-let modalDiv = document.createElement("div");
-modalDiv.setAttribute("id","modaDivId");
+let blur = document.getElementById("backgroundBlur");
+blur.classList.add("activeBlur");
+
+let modalDiv = document.getElementById("modalDivSelect");
+modalDiv.innerHTML = "";
+modalDiv.classList.add("activeModal");
+
 let modalInnerTopDiv = document.createElement("div");
 modalInnerTopDiv.setAttribute("id","modalTopDivId");
 let modalName = document.createElement("h3");
@@ -470,11 +414,84 @@ let btn1 = document.createElement("button");
 btn1.innerText = "Gluten Free";
 let btn2 = document.createElement("button");
 let btn3 = document.createElement("button");
+let closeModalBtn = document.createElement("button");
+closeModalBtn.setAttribute("id","closeModalBtn");
+closeModalBtn.innerText = "X";
+
+closeModalBtn.addEventListener("click",function(){
+    modalDiv.innerHTML = "";
+    modalDiv.classList.remove("activeModal");
+    blur.classList.remove("activeBlur");
+})
+modalInnerTopDiv.append(modalName,modalSubName,closeModalBtn);
 
 
-modalInnerTopDiv.append(modalName,modalSubName);
-modalDiv.append(modalInnerTopDiv);
-bodyDiv.append(modalDiv);
+let middleModalDiv = document.createElement("div");
+middleModalDiv.setAttribute("id","middleModalDivId");
+let imageModalDiv = document.createElement("div");
+imageModalDiv.setAttribute("id","imageModalDiv");
+let imgModal = document.createElement("img");
+imgModal.setAttribute("id","imgModalId");
+imgModal.src = x.img;
+
+let innerMiddleModalDiv = document.createElement("div");
+innerMiddleModalDiv.setAttribute("id","innerMiddleModalDiv");
+let innerDivHead = document.createElement("h3");
+innerDivHead.innerText = x.itemInfo;
+let modalPara = document.createElement("p");
+modalPara.innerText = x.itemDetails;
+innerMiddleModalDiv.append(innerDivHead,modalPara);
+imageModalDiv.append(imgModal);
+middleModalDiv.append(imageModalDiv);
+
+let modalIngredient = document.createElement("div");
+modalIngredient.setAttribute("id","modalIndgredient");
+let imgModal1 = document.createElement("img");
+imgModal1.setAttribute("class","imgModal1");
+let imgModal2 = document.createElement("img");
+imgModal2.setAttribute("class","imgModal1");
+
+let imgModal3 = document.createElement("img");
+imgModal3.setAttribute("class","imgModal1");
+
+let imgModal4 = document.createElement("img");
+imgModal4.setAttribute("class","imgModal1");
+
+let imgModal5 = document.createElement("img");
+imgModal5.setAttribute("class","imgModal1");
+
+let imgModal6 = document.createElement("img");
+imgModal6.setAttribute("class","imgModal1");
+
+imgModal1.src = x.ingreadientsThumb[0];
+imgModal2.src = x.ingreadientsThumb[1];
+imgModal3.src = x.ingreadientsThumb[2];
+imgModal4.src = x.ingreadientsThumb[3];
+imgModal5.src = x.ingreadientsThumb[4];
+imgModal6.src = x.ingreadientsThumb[5];
+
+let indgrediantHead = document.createElement("h3");
+indgrediantHead.innerText = "Ingredients";
+modalIngredient.append(indgrediantHead,imgModal1,imgModal2,imgModal3,imgModal4,imgModal5,imgModal6);
+
+
+let ingreadientsInfo = document.createElement("div");
+ingreadientsInfo.setAttribute("id","ingreadientsInfo");
+
+let ingreadientsInfoP = document.createElement("p");
+
+ingreadientsInfoP.innerText = x.ingredients;
+
+let indHeadP = document.createElement("h4");
+indHeadP.innerText = "All Ingredients";
+
+
+ingreadientsInfo.append(indHeadP,ingreadientsInfoP);
+
+
+
+modalDiv.append(modalInnerTopDiv,middleModalDiv,innerMiddleModalDiv,modalIngredient,ingreadientsInfo);
+
 })
 }
 
