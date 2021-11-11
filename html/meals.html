@@ -215,10 +215,12 @@ color: rgb(0, 0, 0,0.9);
 #rightFixedDiv{
     width: 28%;
     height: 800px;
-    display: flex;
-    flex-direction: column;
+    
     
     float: right;
+    border: 00.1px solid rgb(0, 0, 0,0.1);
+    margin-top: -3.7rem;
+    background-color: white;
 
 }
 #mealsNavbar{
@@ -244,15 +246,81 @@ border: 0.1px solid rgb(0, 0, 0,0.1);
 #heading>h3{
     margin-left: 1.5rem;
 }
+#trollyImg{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 0rem;
+    margin-left: 10rem;
+    
+}
+#checkOutBtn{
+    width: 70%;
+    margin-left: 4rem;
+    height: 3rem;
+    
+    border: none;
+    color: white;
+   
+}
+.checkOutBtnActive{
+background-color:#3265f6 ;
+}
+.imgCheckOut{
+    width: 5rem;
+    height: 5rem;
+    margin-right:1rem ;
+}
+.checkoutDiv{
+    display: flex;
+    
+}
+#rightFixedSubDiv{
+    width: 96%;
+    height: 600px;
+  
+    padding: 2%;
+    overflow: scroll;
+}
+.checkoutDiv{
+    border: 0.1px solid rgb(14, 13, 13,0.1);
+    margin: 0.5rem;
+}
+#cartCount{
+    margin-left: 11.8rem;
+    margin-top: -2.4rem;
+    margin-bottom: 3rem;
+}
+#selectedCount{
+    margin-left: 14rem;
+    margin-top: -3.5rem;
+}
+#clearAll{
+    margin-left: 16rem;
+    margin-top: -1rem;
+}
+#clearAll:hover{
+    color: cornflowerblue;
+    cursor:pointer;
+}
     </style>
 </head>
 <body id="iDiv">
-    <div id="mealsNavbar"></div>
+    <div id="mealsNavbar">
+        
+    </div>
     <div id="heading"> </div>
     <div id="itemDiv"></div>
     <div id = "modalDivSelect" ></div>
     <div id="backgroundBlur" ></div>
-    <div id="rightFixedDiv"></div>
+    <div id="rightFixedDiv">
+
+        <div id="rightFixedSubDiv"></div>
+        <img id ="trollyImg"src="./trolley.png" alt="">
+            <p id ="cartCount">0</p>
+            <p id="selectedCount">#</p>
+            <p id="clearAll">Clear All</p>
+        <button id="checkOutBtn">Next</button>
+    </div>
 </body>
 </html>
 <script>
@@ -631,8 +699,17 @@ headValue.innerText = `Choose ${numOfMeals} meals`;
 heading.append(headValue);
 
 
+let count = numOfMeals;
+count = Number(count);
+console.log("count",count);
+let cartCount = document.getElementById("cartCount");
+let itemCount = 0;
+let checkOutBtn = document.getElementById("checkOutBtn");
 
 
+let selectedCount = document.getElementById("selectedCount");
+
+selectedCount.innerText = count;
 function append(x){
 let div = document.createElement("div");
 
@@ -655,8 +732,38 @@ imageDiv.append(img);
 let btnAdd = document.createElement("button");
 btnAdd.setAttribute("class","dataAddBtn");
 btnAdd.setAttribute("id",x.itemNo);
+
+let rightFixedDiv = document.getElementById("rightFixedSubDiv");
+
+let clear = document.getElementById("clearAll");
+clear.addEventListener("click",function(){
+    rightFixedDiv.innerHTML = "";
+    cartCount.innerText=0;
+    itemCount=0;
+    checkOutBtn.classList.remove("checkOutBtnActive");
+})
+
+
 btnAdd.addEventListener("click",function(){
-    console.log(x.itemName);
+    itemCount++;
+ if(itemCount==count){
+     alert(`You added ${count} in the cart`);
+    checkOutBtn.classList.add("checkOutBtnActive");
+ }
+let checkoutDiv = document.createElement("div");
+checkoutDiv.setAttribute("class","checkoutDiv");
+let imgCheckout = document.createElement("img");
+imgCheckout.setAttribute("class","imgCheckOut")
+imgCheckout.src = x.img;
+let titleCheckout = document.createElement("h5");
+titleCheckout.innerText = x.itemName;
+
+checkoutDiv.append(imgCheckout,titleCheckout);
+rightFixedDiv.append(checkoutDiv);
+
+
+cartCount.innerText = itemCount;
+
 })
 
 let textDivTitle = document.createElement("div");
