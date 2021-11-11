@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+body{
+    background-color: #fffdf7;
+}
+         .thirdDivHome{
+            height: 550px;
+            width: 100%;
+          
+            background-color: #fffdf7;
+            
+            margin-top: 6rem;
+            
+        }
+        .thirdDivs{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            margin-left: 4rem;
+            margin-top: 4rem;
+        }
+        .thirdDivs>div{
+            height: 14rem;
+            width: 13rem;
+            box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0, 0, 0,0.2);
+            background-color: white;
+        }
+        .thirdDivText{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .thirdDivText>h1,p{
+            text-align: center;
+        }
+        .thirdDivs>div>h3{
+            margin-top: 2.5rem;
+              text-align: center;
+        }
+        .thirdDivs>div>p{
+            margin-top: -0.8rem;
+            font-size: 0.8rem;
+            color: grey;
+
+        }
+        .thirdDivs>div>h4{
+            margin-top: 2.5rem;
+              text-align: center;
+            
+        }
+        .thirdDivs>div>button{
+            background-color: #3265f6;
+            color: white;
+            margin-left: 2.5rem;
+            width: 8rem;
+            height: 2rem;
+            border: none;
+        }
+        .thirdDivHome>p{
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: grey;
+        }
+
+
+#navBarFreshly{
+    display: flex;
+    width: 105%;
+    height: 4.3rem;
+  
+    margin-left: -1rem;
+    margin-top: -6rem;
+    margin-right: -3rem;
+    position: fixed;
+    background-color: #ffff;
+    z-index: 1000;
+    
+}
+
+#freshlyLogoId{
+    width: 6.6rem;
+    height: 2rem;
+    margin-top: 1.3rem;
+    margin-left: 1.4rem;
+}
+.navbarBtnDiv{
+   
+    margin-left: +22rem;
+}
+.navbarBtnDiv>button{
+    border: none;
+    background-color:#ffff ;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    color: rgb(0, 0, 0,0.3);
+}
+.navbarBtnDiv>button:nth-child(1){
+    color: black;
+}
+
+#navbarSignUpDiv{
+    display: flex;
+    margin-left: 25rem;
+}
+#navbarLogin{
+    border: none;
+    background-color:#fffdf7 ;
+    margin-top: 0.5rem;
+}
+#navbarSignup{
+background-color:#3265f6 ;
+border: none;
+height: 3rem;
+width: 5rem;
+margin-top: 0.8rem;
+color: white;
+}
+    </style>
+</head>
+<body>
+    <div id="navBarFreshly">
+        <img id="freshlyLogoId" src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt="">
+ <div class="navbarBtnDiv">
+    <button><h4>Plan &nbsp; &nbsp;&nbsp;&nbsp;></h4></button>
+    <button><h4>Day  &nbsp; &nbsp;&nbsp;&nbsp;></h4></button>
+    <button><h4>Meals  &nbsp; &nbsp;&nbsp;&nbsp;></h4></button>
+
+    <button><h4>Checkout &nbsp; &nbsp;&nbsp;&nbsp; ></h4></button>
+     </div>
+    </div>
+
+
+    <div class="thirdDivHome">
+        <div class="thirdDivText">
+          <h1>Plans that work for you</h1>
+          <p>Choose from 4, 6, 8, 10, or 12 meals per week. You can change up your number of meals with every order if you’d like.</p>
+        
+        </div>
+        <div class="thirdDivs">
+            <div>
+                <h3>4 Meals</h3>
+                <p>per week</p>
+                <h4>$11.79 / meal</h4>
+                <button id="btn1">Choose</button>
+               
+            </div>
+            <div>
+                 <h3>6 Meals</h3>
+                <p>per week</p>
+                <h4>$9.99 / meal</h4>
+                <button id="btn2">Choose</button>
+
+
+            </div>
+            <div>
+                <h3>8 Meals</h3>
+                <p>per week</p>
+                <h4>$9.49 / meal</h4>
+                <button id="btn3">Choose</button>
+
+            </div>
+            <div>
+                <h3>10 Meals</h3>
+                <p>per week</p>
+                <h4>$9.29 / meal</h4>
+                <button id="btn4">Choose</button>
+
+            </div>
+            <div>
+                <h3>12 Meals</h3>
+                <p>per week</p>
+                <h4>$8.99 / meal</h4>
+                <button id="btn5">Choose</button>
+
+            </div>
+           
+            
+
+        </div>
+        <p>Shipping Added At Checkout</p>
+        </div> 
+</body>
+</html>
+
+<script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+    let btn4 = document.getElementById("btn4");
+    let btn5 = document.getElementById("btn5");
+
+    btn1.addEventListener("click",function(){
+        let planValue = 4;
+        localStorage.setItem("planValue",JSON.stringify(planValue));
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/day.html");
+    });
+    btn2.addEventListener("click",function(){
+        let planValue = 6;
+        localStorage.setItem("planValue",JSON.stringify(planValue));
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/day.html");
+
+    });
+    btn3.addEventListener("click",function(){
+        let planValue = 8;
+        localStorage.setItem("planValue",JSON.stringify(planValue));
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/day.html");
+
+    });
+    btn4.addEventListener("click",function(){
+        let planValue = 10;
+        localStorage.setItem("planValue",JSON.stringify(planValue));
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/day.html");
+
+    })
+    btn5.addEventListener("click",function(){
+        let planValue = 12;
+        localStorage.setItem("planValue",JSON.stringify(planValue));
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/day.html");
+
+    })
+
+</script>

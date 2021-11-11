@@ -7,33 +7,258 @@
     <title>Document</title>
 
     <style>
+        body{
+    background-color: #fffdf7;
+    
+}
+        #itemDiv{
+            width: 70%;
+            height: 49rem;
+           
+            
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            grid-gap: 0.6%;
+            position: relative;
+         
+         margin-left: 0.5rem;
+         overflow: scroll;
+         
         
+        }
+.container{
+    
+    margin: 3%;
+ 
+    margin-left: 3%;
+    padding: 1%;
+    position: relative;
+    
+    
+}
+#imageDiv{
+    width: 100%;
+    height: 14rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    padding: 1px;
+}
+.itemImg{
+   
+  width: 13.5rem;
+    height: 13.5rem;
+  
+}
+.container>div>h4{
+    text-align: center;
+}
+.container>div>p{
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0,0.8);
+}
+.container>p:hover{
+    color: rgb(0, 0, 0);
+}
+
+#modalDivId{
+    width: 60%;
+    height: 600px;
+    border: 1px solid black;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+
+}
+.activeModal{
+    width: 47%;
+    margin-left: 10rem;
+    height: 45rem;
+    background-color: white;
+    
+    position: absolute;
+    z-index: 100;
+    margin-top: 20rem;
+    overflow: scroll;
+  background-color: #fffdf7;
+}
+.nonActive{
+    display: none;
+}
+
+#modalTopDivId{
+    border-bottom: 1px solid rgb(8, 8, 8,0.2);
+    
+    width: 96%;
+    padding: 2%;
+    margin: auto;
+    height: 5rem;
+    background-color: white;
+}
+#modalTopDivId>h3{
+    margin-top: -0.1rem;
+}
+#modalTopDivId>p{
+    font-size: 1rem;
+    color: rgb(3, 3, 3,0.7);
+    font-style: italic;
+}
+#imageModalDiv{
+    width: 20rem;
+    height: 12rem;
+    background-size: cover;
+    margin-left: 0.7rem;
+    margin-top: 1rem;
+    float: left;
+}
+
+#imgModalId{
+    width: 20rem;
+    height: 12rem;
+}
+#innerMiddleModalDiv{
+    float: right;
+    padding: 1%;
+    width: 44%;
+    height: 21rem;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    margin-right: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: white;
+
+}
+
+#innerMiddleModalDiv>p{
+    font-size: 0.86rem;
+}
+#innerMiddleModalDiv>h3{
+    margin-top: -0.2rem;
+}
+
+#modalIndgredient{
+    width: 47%;
+    height: 14rem;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    float: left;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    background-color: white;
+
+}
+
+#modalIndgredient>h3{
+margin-left: 0.5rem;
+color: rgb(0, 0, 0,0.9);
+}
+.imgModal1{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1.7rem;
+    margin-top: 0.3rem;
+    background-color: white;
+
+}
+#ingreadientsInfo{
+    height: 25rem;
+    width: 44%;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    float: right;
+    margin-top: 1rem;
+    margin-right: 0.7rem;
+    padding: 1%;
+    font-size: 0.80rem;
+    background-color: white;
+
+    
+}
+#closeModalBtn{
+    float: right;
+    margin-top: -4.5rem;
+    border: none;
+}
+#closeModalBtn:hover{
+    background-color: cornflowerblue;
+}
+.activeBlur{
+    height: 1750px;
+    width: 105%;
+    z-index: 80;
+    position: absolute;
+    background-color: rgb(0, 0, 0,0.5);
+    margin-left: -1rem;
+    margin-top: -1rem;
+}
+.dataAddBtn{
+    background-color: #3265f6;
+    margin-left: 9rem;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    color: white;
+    z-index: 10000;
+}
+.addBtnDiv{
+    width: 98%;
+    height: 4.5rem;
+
+
+
+}
+#textDivTitle{
+   
+    height: 6rem;
+}
+#dataAddBtn:hover{
+    background-color: cornflowerblue;
+}
+#rightFixedDiv{
+    width: 28%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    
+    float: right;
+
+}
+#mealsNavbar{
+    width: 103%;
+    height: 3.5rem;
+    background-color: white;
+   margin-top: -1.5rem;
+   margin-left: -1rem;
+   display: flex;
+border: 0.1px solid rgb(0, 0, 0,0.1);
+}
+#mealsNavbar>h3{
+    text-align: center;
+    margin-left: 35rem;
+    
+}
+#heading{
+    z-index: -100;
+  
+    margin-top: 1rem;
+    background-color: #fffdf7;
+}
+#heading>h3{
+    margin-left: 1.5rem;
+}
     </style>
-    <link rel="stylesheet" href="menu.css">
 </head>
 <body id="iDiv">
-    <div id="navBarFreshly">
-        <img id="freshlyLogoId" src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt="">
- <div class="navbarBtnDiv">
-        <button><h4>Plans & Menu</h4></button>
-        <button><h4>How it Works</h4></button>
-        <button><h4>Gifts</h4></button>
-        <button><h4>Refer a Friend</h4></button>
-        <button><h4>Help</h4></button>
-     </div>
- <div id="navbarSignUpDiv">
- <button id="navbarLogin"><h4>Login</h4></button>
- <button id="navbarSignup"><h4>Sign Up</h4></button>
- </div>
-     </div>
+    <div id="mealsNavbar"></div>
+    <div id="heading"> </div>
     <div id="itemDiv"></div>
     <div id = "modalDivSelect" ></div>
     <div id="backgroundBlur" ></div>
+    <div id="rightFixedDiv"></div>
 </body>
 </html>
 <script>
 
- 
+
+     
 let freshlyData = [
 {   itemNo:"1",
     itemName:"Steak Peppercorn",
@@ -384,11 +609,33 @@ freshlyData.forEach(function(item){
     
 })
 
+let day = localStorage.getItem("dayValue");
+day = JSON.parse(day);
+
+let  navbarValue = document.createElement("h3");
+navbarValue.innerText = day;
+
+let navbar = document.getElementById("mealsNavbar");
+
+navbar.append(navbarValue);
+
+
+let heading = document.getElementById("heading");
+
+let headValue = document.createElement("h3");
+
+let numOfMeals = localStorage.getItem("planValue");
+numOfMeals = JSON.parse(numOfMeals);
+
+headValue.innerText = `Choose ${numOfMeals} meals`;
+heading.append(headValue);
+
+
 
 
 function append(x){
 let div = document.createElement("div");
-div.setAttribute("id",x.itemNo);
+
 div.setAttribute("class","container");
 let itemName = document.createElement("h4");
 itemName.setAttribute("id","itemName");
@@ -396,13 +643,35 @@ itemName.innerText = x.itemName;
 let subhead = document.createElement("p");
 subhead.innerText = x.subheading;
 let img = document.createElement("img");
-img.setAttribute("id","itemImg");
+img.setAttribute("class","itemImg");
+img.setAttribute("id",x.itemNo);
 let imageDiv = document.createElement("div");
 imageDiv.setAttribute("id","imageDiv");
 
 img.src = x.img;
 imageDiv.append(img);
-div.append(imageDiv,itemName,subhead);
+
+
+let btnAdd = document.createElement("button");
+btnAdd.setAttribute("class","dataAddBtn");
+btnAdd.setAttribute("id",x.itemNo);
+btnAdd.addEventListener("click",function(){
+    console.log(x.itemName);
+})
+
+let textDivTitle = document.createElement("div");
+textDivTitle.setAttribute("id","textDivTitle");
+textDivTitle.append(itemName,subhead)
+
+let addBtnDiv = document.createElement("div");
+addBtnDiv.setAttribute("class","addBtnDiv");
+btnAdd.innerText = "+ Add";
+addBtnDiv.append(btnAdd);
+
+let getValue = document.getElementById("dataAddBtn");
+
+
+div.append(imageDiv,textDivTitle,addBtnDiv);
 itemDiv.append(div);
 bodyDiv.append(itemDiv);
 
@@ -508,5 +777,4 @@ modalDiv.append(modalInnerTopDiv,middleModalDiv,innerMiddleModalDiv,modalIngredi
 
 })
 }
-
 </script>
