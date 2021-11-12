@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <style>
-        
-    </style>
-    <link rel="stylesheet" href="menu.css">
-</head>
-<body id="iDiv">
-    <div id="navBarFreshly">
-        <img id="freshlyLogoId" src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt="">
- <div class="navbarBtnDiv">
-        <button><h4>Plans & Menu</h4></button>
-        <button><h4>How it Works</h4></button>
-        <button><h4>Gifts</h4></button>
-        <button><h4>Refer a Friend</h4></button>
-        <button><h4>Help</h4></button>
-     </div>
- <div id="navbarSignUpDiv">
- <button id="navbarLogin"><h4>Login</h4></button>
- <button id="navbarSignup"><h4>Sign Up</h4></button>
- </div>
-     </div>
-    <div id="itemDiv"></div>
-    <div id = "modalDivSelect" ></div>
-    <div id="backgroundBlur" ></div>
-</body>
-</html>
-<script>
-
- 
 let freshlyData = [
 {   itemNo:"1",
     itemName:"Steak Peppercorn",
@@ -376,137 +341,14 @@ caloriesData:["calories 380","carbs 20g","total fat 24g","protein 19g"]
      
 }
 ];
-let itemDiv = document.getElementById("itemDiv");
-let bodyDiv = document.getElementById("iDiv");
 
-freshlyData.forEach(function(item){
-    append(item)
-    
-})
+
+// https://assets-global.website-files.com/5d03b4e130118314af624b20/60928e2ceb6cb2368a43ad07_Freshly_GiftCardRedemption_1732x1416%20(1).jpg
+// https://assets-global.website-files.com/5d03b4e130118314af624b20/5f523e412d98cd166a6c84e6_logo-header.64f3bdc15b1f321829f9f30c7853a1469f469d71.svg
+// https://assets-global.website-files.com/5d03b4e130118314af624b20/5d94e04ff2b857688f7138b6_home_image2.jpg
 
 
 
-function append(x){
-let div = document.createElement("div");
-div.setAttribute("id",x.itemNo);
-div.setAttribute("class","container");
-let itemName = document.createElement("h4");
-itemName.setAttribute("id","itemName");
-itemName.innerText = x.itemName;
-let subhead = document.createElement("p");
-subhead.innerText = x.subheading;
-let img = document.createElement("img");
-img.setAttribute("id","itemImg");
-let imageDiv = document.createElement("div");
-imageDiv.setAttribute("id","imageDiv");
-
-img.src = x.img;
-imageDiv.append(img);
-div.append(imageDiv,itemName,subhead);
-itemDiv.append(div);
-bodyDiv.append(itemDiv);
-
-let select = document.getElementById(x.itemNo);
-select.addEventListener("click" ,function(){
-
-let blur = document.getElementById("backgroundBlur");
-blur.classList.add("activeBlur");
-
-let modalDiv = document.getElementById("modalDivSelect");
-modalDiv.innerHTML = "";
-modalDiv.classList.add("activeModal");
-
-let modalInnerTopDiv = document.createElement("div");
-modalInnerTopDiv.setAttribute("id","modalTopDivId");
-let modalName = document.createElement("h3");
-modalName.setAttribute("id","modalNameId");
-modalName.innerText = x.itemName;
-let modalSubName = document.createElement("p");
-modalSubName.innerText = x.subheading;
-
-let btn1 = document.createElement("button");
-btn1.innerText = "Gluten Free";
-let btn2 = document.createElement("button");
-let btn3 = document.createElement("button");
-let closeModalBtn = document.createElement("button");
-closeModalBtn.setAttribute("id","closeModalBtn");
-closeModalBtn.innerText = "X";
-
-closeModalBtn.addEventListener("click",function(){
-    modalDiv.innerHTML = "";
-    modalDiv.classList.remove("activeModal");
-    blur.classList.remove("activeBlur");
-})
-modalInnerTopDiv.append(modalName,modalSubName,closeModalBtn);
-
-
-let middleModalDiv = document.createElement("div");
-middleModalDiv.setAttribute("id","middleModalDivId");
-let imageModalDiv = document.createElement("div");
-imageModalDiv.setAttribute("id","imageModalDiv");
-let imgModal = document.createElement("img");
-imgModal.setAttribute("id","imgModalId");
-imgModal.src = x.img;
-
-let innerMiddleModalDiv = document.createElement("div");
-innerMiddleModalDiv.setAttribute("id","innerMiddleModalDiv");
-let innerDivHead = document.createElement("h3");
-innerDivHead.innerText = x.itemInfo;
-let modalPara = document.createElement("p");
-modalPara.innerText = x.itemDetails;
-innerMiddleModalDiv.append(innerDivHead,modalPara);
-imageModalDiv.append(imgModal);
-middleModalDiv.append(imageModalDiv);
-
-let modalIngredient = document.createElement("div");
-modalIngredient.setAttribute("id","modalIndgredient");
-let imgModal1 = document.createElement("img");
-imgModal1.setAttribute("class","imgModal1");
-let imgModal2 = document.createElement("img");
-imgModal2.setAttribute("class","imgModal1");
-
-let imgModal3 = document.createElement("img");
-imgModal3.setAttribute("class","imgModal1");
-
-let imgModal4 = document.createElement("img");
-imgModal4.setAttribute("class","imgModal1");
-
-let imgModal5 = document.createElement("img");
-imgModal5.setAttribute("class","imgModal1");
-
-let imgModal6 = document.createElement("img");
-imgModal6.setAttribute("class","imgModal1");
-
-imgModal1.src = x.ingreadientsThumb[0];
-imgModal2.src = x.ingreadientsThumb[1];
-imgModal3.src = x.ingreadientsThumb[2];
-imgModal4.src = x.ingreadientsThumb[3];
-imgModal5.src = x.ingreadientsThumb[4];
-imgModal6.src = x.ingreadientsThumb[5];
-
-let indgrediantHead = document.createElement("h3");
-indgrediantHead.innerText = "Ingredients";
-modalIngredient.append(indgrediantHead,imgModal1,imgModal2,imgModal3,imgModal4,imgModal5,imgModal6);
-
-
-let ingreadientsInfo = document.createElement("div");
-ingreadientsInfo.setAttribute("id","ingreadientsInfo");
-
-let ingreadientsInfoP = document.createElement("p");
-
-ingreadientsInfoP.innerText = x.ingredients;
-
-let indHeadP = document.createElement("h4");
-indHeadP.innerText = "All Ingredients";
-
-
-ingreadientsInfo.append(indHeadP,ingreadientsInfoP);
-
-
-
-modalDiv.append(modalInnerTopDiv,middleModalDiv,innerMiddleModalDiv,modalIngredient,ingreadientsInfo);
-
-})
-}
-
-</script>
+// ap id = cee9d15d
+// api key = 
+// a6fae173f2d20d450713c53cbf3a71da	 
