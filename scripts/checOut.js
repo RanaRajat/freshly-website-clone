@@ -83,7 +83,7 @@ formValue.addEventListener("click",function(){
 
     };
       
-    obj = obj.toString();
+   
 
     localStorage.setItem("objCart",JSON.stringify(obj));
 

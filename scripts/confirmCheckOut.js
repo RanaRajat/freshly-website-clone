@@ -68,9 +68,10 @@ email1.innerText = emailValue;
 
 
     let obj = localStorage.getItem("objCart");
+    
     obj = JSON.parse(obj);
  
-
+    console.log(obj);
 
     firstName.innerText = obj.firstNameO;
     lastName.innerText = obj.lastNameO;
