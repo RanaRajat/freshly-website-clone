@@ -56,39 +56,35 @@ email1.innerText = emailValue;
 
 
 
-formValue.addEventListener("click",function(){
-    let firstName = document.getElementById("firstName1").value;
-    let lastName = document.getElementById("lastName1").value;
-    let fullName = document.getElementById("fullName1").value;
-    let AddressLine1 = document.getElementById("AddressLine1").value;
-    let AddressLine2 = document.getElementById("AddressLine2").value;
-    let city1 = document.getElementById("city1").value;
-    let state1= document.getElementById("state1").value;
-    let zip1= document.getElementById("zip1").value;
-    let phone1= document.getElementById("phone1").value;
+    let firstName = document.getElementById("firstName1");
+    let lastName = document.getElementById("lastName1");
+    let fullName = document.getElementById("fullName1");
+    let AddressLine1 = document.getElementById("AddressLine1");
+    let AddressLine2 = document.getElementById("AddressLine2");
+    let city1 = document.getElementById("city1");
+    let state1= document.getElementById("state1");
+    let zip1= document.getElementById("zip1");
+    let phone1= document.getElementById("phone1");
 
 
-    let obj = {
-
-      firstNameO:firstName,
-      lastNameO:lastName,
-      fullNameO:fullName,
-      AddressLine1O:AddressLine1,
-      AddressLine2O:AddressLine2,
-      city1O:city1,
-      state1O:state1,
-      zip1O:zip1,
-      phone1O:phone1
+    let obj = localStorage.getItem("objCart");
+    obj = JSON.parse(obj);
+ 
 
 
-    };
-      
-    obj = obj.toString();
+    firstName.innerText = obj.firstNameO;
+    lastName.innerText = obj.lastNameO;
+    fullName.innerText = obj.fullNameO;
+    AddressLine1.innerText = obj.AddressLine1O;
+    AddressLine2.innerText = obj.AddressLine2O;
+    city1.innerText = obj.city1O;
+    state1.innerText = obj.state1O;
+    zip1.innerText = obj.zip1O;
+    phone1.innerText = obj.phone1O;
+    
 
-    localStorage.setItem("objCart",JSON.stringify(obj));
+    let nextSubmitBtn = document.getElementById("nextSubmitBtn");
 
-    window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/confirmCheckOut.html");
-
-
-
+nextSubmitBtn.addEventListener("click",function(){
+    alert("Payment Successfull");
 })
