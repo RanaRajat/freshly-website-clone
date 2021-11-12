@@ -701,10 +701,12 @@ heading.append(headValue);
 
 let count = numOfMeals;
 count = Number(count);
-console.log("count",count);
+
 let cartCount = document.getElementById("cartCount");
 let itemCount = 0;
 let checkOutBtn = document.getElementById("checkOutBtn");
+
+
 
 
 let selectedCount = document.getElementById("selectedCount");
@@ -749,6 +751,16 @@ btnAdd.addEventListener("click",function(){
  if(itemCount==count){
      alert(`You added ${count} in the cart`);
     checkOutBtn.classList.add("checkOutBtnActive");
+
+     checkOutBtn .addEventListener("click",function(){
+
+        let aData = rightFixedDiv.innerHTML
+        aData =aData.toString();
+       
+        localStorage.setItem("innerHtml",JSON.stringify(aData));
+
+       window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/html/checOut.html");
+     })
  }
 let checkoutDiv = document.createElement("div");
 checkoutDiv.setAttribute("class","checkoutDiv");
@@ -765,6 +777,7 @@ rightFixedDiv.append(checkoutDiv);
 cartCount.innerText = itemCount;
 
 })
+
 
 let textDivTitle = document.createElement("div");
 textDivTitle.setAttribute("id","textDivTitle");
