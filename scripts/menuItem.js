@@ -473,3 +473,14 @@ let freshlyData = [
     
     })
     }
+
+    let navbarSignup = document.getElementById("navbarSignup");
+    navbarSignup.addEventListener("click",function(){
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+    })
+
+    let navbarLogin = document.getElementById("navbarLogin");
+
+    navbarLogin.addEventListener("click",function(){
+        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+    })

@@ -110,3 +110,33 @@ border: none;
 color: red;
 font-size: 0.8rem;
 }
+
+#footerSignUp{
+
+    width: 105%;
+    height: 750px;
+    margin-left: -1rem;
+    background-color: 
+    #fffdf7;
+}
+#footerSignUp>h1{
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3rem;
+}
+#innerFooterDiv{
+    width: 80%;
+    margin: auto;
+    height: 600px;
+    margin-top: 4rem;
+   
+    
+}
+#innerFooterDiv>div{
+    height: 4rem;
+    
+}
+#innerFooterDiv>div>h3{
+    font-weight: 300;
+
+}
