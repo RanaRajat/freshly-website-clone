@@ -27,7 +27,7 @@ let leftClick = document.getElementById("leftBtn");
     let menuBtn = document.getElementsByClassName("MenuBtn")[0];
 
     menuBtn.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/menuItems.html");
+        window.location.assign("freshlyClone/freshly-website-clone/menuItems.html");
     })
 
 
