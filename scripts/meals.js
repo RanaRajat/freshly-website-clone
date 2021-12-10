@@ -432,7 +432,7 @@ let freshlyData = [
            
             localStorage.setItem("innerHtml",JSON.stringify(aData));
     
-           window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/checOut.html");
+           window.location.assign("../checOut.html");
          })
      }
     let checkoutDiv = document.createElement("div");
