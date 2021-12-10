@@ -10,7 +10,7 @@ let btn1 = document.getElementById("btn1");
         localStorage.setItem("planValue",JSON.stringify(planValue));
         localStorage.setItem("planPrice",JSON.stringify(planPrice));
 
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/day.html");
+        window.location.assign("../day.html");
     });
     btn2.addEventListener("click",function(){
         let planValue = 6;
@@ -19,7 +19,7 @@ let btn1 = document.getElementById("btn1");
         localStorage.setItem("planValue",JSON.stringify(planValue));
         localStorage.setItem("planPrice",JSON.stringify(planPrice));
 
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/day.html");
+        window.location.assign("../day.html");
 
     });
     btn3.addEventListener("click",function(){
@@ -29,7 +29,7 @@ let btn1 = document.getElementById("btn1");
         localStorage.setItem("planValue",JSON.stringify(planValue));
         localStorage.setItem("planPrice",JSON.stringify(planPrice));
 
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/day.html");
+        window.location.assign("../day.html");
 
     });
     btn4.addEventListener("click",function(){
@@ -39,7 +39,7 @@ let btn1 = document.getElementById("btn1");
         localStorage.setItem("planValue",JSON.stringify(planValue));
         localStorage.setItem("planPrice",JSON.stringify(planPrice));
 
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/day.html");
+        window.location.assign("../day.html");
 
     })
     btn5.addEventListener("click",function(){
@@ -49,6 +49,6 @@ let btn1 = document.getElementById("btn1");
         localStorage.setItem("planValue",JSON.stringify(planValue));
         localStorage.setItem("planPrice",JSON.stringify(planPrice));
 
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/day.html");
+        window.location.assign("../day.html");
 
     })
