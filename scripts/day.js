@@ -113,7 +113,7 @@ Next.addEventListener("click",function(){
     localStorage.setItem("dayValue",dayValue);
    
     if(dayValue.length>2){
-    window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/meals.html");
+    window.location.assign("../meals.html");
 }
     else{
         alert("Please select a date");
