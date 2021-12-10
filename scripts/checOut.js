@@ -87,7 +87,7 @@ formValue.addEventListener("click",function(){
 
     localStorage.setItem("objCart",JSON.stringify(obj));
 
-    window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/confirmCheckOut.html");
+    window.location.assign("../confirmCheckOut.html");
 
 
 
