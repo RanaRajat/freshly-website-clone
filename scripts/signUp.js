@@ -12,7 +12,7 @@ let submit = document.getElementById("submitBtn");
 
         localStorage.setItem("email",JSON.stringify(email));
         localStorage.setItem("zip",JSON.stringify(zip));
-         window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/choosePlan.html");
+         window.location.assign("../choosePlan.html");
        }
        else{
            hidden.innerText = "please enter a valid Email and Zip"
