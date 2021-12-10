@@ -35,7 +35,7 @@ let leftClick = document.getElementById("leftBtn");
     let navbarSignup = document.getElementById("navbarSignup");
 
     navbarSignup.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
 
 
@@ -49,7 +49,7 @@ let leftClick = document.getElementById("leftBtn");
 
         localStorage.setItem("email",JSON.stringify(email));
         localStorage.setItem("zip",JSON.stringify(zip));
-         window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/choosePlan.html");
+         window.location.assign("../choosePlan.html");
        }
 
        else{
@@ -65,31 +65,31 @@ let leftClick = document.getElementById("leftBtn");
     let btnChoose5 = document.getElementById("btnChoose5");
 
     btnChoose1.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
 
     btnChoose2.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
     btnChoose3.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
     btnChoose4.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
     btnChoose5.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
 
 
     let plansMenu = document.getElementById("plansAndMenuLink");
 
     plansMenu.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/menuItems.html");
+        window.location.assign("../menuItems.html");
     })
 
     let navbarLogin = document.getElementById("navbarLogin");
 
     navbarLogin.addEventListener("click",function(){
-        window.location.assign("http://127.0.0.1:5500/freshlyClone/freshly-website-clone/signup.html");
+        window.location.assign("../signup.html");
     })
