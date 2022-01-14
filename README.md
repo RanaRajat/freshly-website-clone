@@ -2,7 +2,7 @@
 
 ### About this website:
 
->This is a solo project done by me during construct week at Masai School.
+>This is a solo project done during construct week of unit 3 and It was built by in 5 days. Freshly is a meals delivery website in USA , Where users can order meals for them and can also select the number of meals and the days on which they want to buy the meal.
 
 ---
 
