@@ -30,6 +30,7 @@
 ---
 
 ![freshly2](https://imgur.com/NYUrJ5u.png)
+>all the items can be viwed on this page and if a user want to see detailed information than he can simply click on it and can see the detailed information about that product.
 
 ## Pop up view of each item:
 
@@ -76,3 +77,5 @@
 
 >here user can select the payment option after seeing and confirming the amount and address of the meal plan.
 ---
+
+You can visit the cloned website for more information and link is mentioned above.
