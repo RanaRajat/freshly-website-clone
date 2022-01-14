@@ -16,9 +16,31 @@
 
 ---
 
+## Landing Page:
+
+---
+
 ![freshly](https://imgur.com/Nwwdgt4.png)
+
+>here user can go to further pages of this website he/she can Signup if new user or else can simply login and view plans and menus.
+
+---
+## Plans & menu page:
+
+---
+
 ![freshly2](https://imgur.com/NYUrJ5u.png)
+
+## Pop up view of each item:
+
+---
+
 ![freshly3](https://imgur.com/FD2z2x8.png)
+
+>popup view of each item makes easier for user to make up his/her mind to buy the meals plan. And also provide the detailed information about the items like ingredients used etc.
+
+---
+
 ![freshly4](https://imgur.com/XkGnmOJ.png)
 ![freshly5](https://imgur.com/kVrAP7n.png)
 ![freshly6](https://imgur.com/tB1zDDD.png)
