@@ -18,7 +18,7 @@
 
 ## Landing Page:
 
----
+
 
 ![freshly](https://imgur.com/Nwwdgt4.png)
 
@@ -33,7 +33,7 @@
 
 ## Pop up view of each item:
 
----
+
 
 ![freshly3](https://imgur.com/FD2z2x8.png)
 
@@ -41,7 +41,15 @@
 
 ---
 
+## Diffrent plans :
+
+---
+
 ![freshly4](https://imgur.com/XkGnmOJ.png)
+
+> here user can see the cost of plans and make up his mind.
+---
+
 ![freshly5](https://imgur.com/kVrAP7n.png)
 ![freshly6](https://imgur.com/tB1zDDD.png)
 ![freshly7](https://imgur.com/2OeEqAq.png)
